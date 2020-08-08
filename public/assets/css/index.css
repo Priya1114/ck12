@@ -43,27 +43,35 @@ body {
 
 .chapter-name {
   background-color: white;
-  color: rgb(86, 84, 77);
+  cursor: pointer;
+  color: #2f3542;
   border: none;
   outline: none;
   font-size: 18px;
   padding: 18px;
+  padding-bottom: 8px;
   font-weight: 600;
   transition: 0.1s;
   letter-spacing: 1.2px;
+  display: flex;
 }
 
 .chapter-title {
-  cursor: pointer;
-  display: inline-block;
-  width: 90%;
+  width: 86%;
   text-align: left;
 }
 
 .chapter-count {
-  display: inline-block;
   text-align: right;
-  width: 10%;
+  width: 14%;
+  font-size: 14px;
+}
+
+.progress-meter {
+  width: 100%;
+  height: 12px;
+  display: block;
+  text-align: center;
 }
 
 .lesson {
