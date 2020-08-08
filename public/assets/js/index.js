@@ -42,12 +42,21 @@ function renderLessons(item, index, chapterIndex, length) {
 
   const progress = document.createElement('div');
   progress.classList.add('progress-circle');
+  let progressTitle = 'Not started';
 
-  // setting green background for completed lessons
+  // updating progress circle for completed lessons
   if(item.status === 'COMPLETE') {
     progress.classList.add('status-completed');
     lesson.style.color = '#13aa5a';
+    progressTitle = 'Completed';
   }
+  // updating progress circle for in-progress lessons
+  else if(item.status === 'IN_PROGRESS') {
+    progress.classList.add('status-in-progress');
+    lesson.style.color = '#f2be54';
+    progressTitle = 'In Progress';
+  }
+  progress.setAttribute('title', progressTitle);
 
   const title = document.createElement('div');
   const titleText = document.createTextNode(`${chapterIndex+1}.${index+1} ${item.title}`);
